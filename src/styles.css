@@ -1,0 +1,52 @@
+/* Обнуляем отступы и задаем общий стиль */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Стили для хедера */
+header {
+    display: flex; /* Размещаем элементы в строку */
+    justify-content: space-between; /* Равномерное распределение */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    padding: 15px 30px;
+    background-color: #333; /* Тёмный фон */
+    color: white; /* Белый текст */
+}
+
+/* Логотип */
+.logo img {
+    height: 50px; /* Фиксируем высоту логотипа */
+}
+
+/* Социальные ссылки */
+.social-links a {
+    color: white;
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 0 10px; /* Отступы между ссылками */
+    font-size: 16px;
+}
+
+.social-links a:hover {
+    text-decoration: underline; /* Добавляем подчеркивание при наведении */
+}
+
+/* Контакты */
+.contacts p {
+    font-size: 14px;
+}
+
+/* Бургер-меню */
+.burger-menu {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.burger-menu:hover {
+    color: #ffcc00; /* Меняем цвет при наведении */
+}
