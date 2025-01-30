@@ -15,6 +15,11 @@ header {
     background-color: #333; /* Тёмный фон */
     color: white; /* Белый текст */
 }
+.logo h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
 
 /* Логотип */
 .logo img {
