@@ -20,17 +20,19 @@ header {
     align-items: center;
     gap: 10px;
 }
-.logo h1 {
-    font-size: 36px;
-    font-weight: 700;
-    font-family: "Comfortaa", sans-serif;
-    color: white;
-}
+.logo h1,
 .logo h2 {
-    font-size: 28px;
-    font-weight: 400;
-    font-family: "Cormorant Garamond", serif;
-    color: #ffffff; 
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo h1:hover {
+    transform: scale(1.05);
+    color: #109eb8;
+}
+
+.logo h2:hover {
+    transform: scale(1.05);
+    color: #109eb8;
 }
 .social-links a {
     font-weight: 400;
@@ -38,9 +40,6 @@ header {
     color: white;
     text-decoration: none;
     margin: 0 10px;
-}
-.social-links a:hover {
-    text-decoration: underline;
 }
 .contacts {
     display: flex;
@@ -50,6 +49,11 @@ header {
 .contacts p {
     font-weight: 300;
     font-size: 14px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.contacts p:hover {
+    transform: scale(1.1); 
+    color: #109eb8; 
 }
 .burger-menu {
     font-size: 24px;
@@ -57,7 +61,51 @@ header {
     border: none;
     color: white;
     cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
+
 .burger-menu:hover {
-    color: #109eb8;
+    transform: scale(1.2); 
+    color: #109eb8; 
+}
+
+.social-links img {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+    filter: invert(1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.social-links img:hover {
+    transform: scale(1.2);
+    filter: invert(0.7) sepia(1) hue-rotate(180deg) saturate(3);
+}
+
+.contacts img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+    filter: invert(1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contacts img:hover {
+    transform: scale(1.1);
+    filter: invert(0.7) sepia(1) hue-rotate(180deg) saturate(3);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-out;
 }
