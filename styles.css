@@ -4,16 +4,21 @@
     box-sizing: border-box;
 }
 body {
+    background: linear-gradient(to bottom, #1e1e1e, #109eb8); 
+    color: white;
+    margin: 0;
     font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
 }
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background-color: #333;
-    color: white;
+    padding: 20px 30px;
+    background: transparent; /* Прозрачный фон, чтобы сочетался с градиентом */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 100;
 }
 .logo {
     display: flex;
@@ -47,16 +52,17 @@ header {
     gap: 20px;
 }
 .contacts p {
-    font-weight: 300;
+    font-weight: 700;
     font-size: 14px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 .contacts p:hover {
     transform: scale(1.1); 
-    color: #109eb8; 
+    color: #1e1e1e; 
 }
 .burger-menu {
     font-size: 24px;
+    font-weight: 600;
     background: none;
     border: none;
     color: white;
@@ -66,7 +72,7 @@ header {
 
 .burger-menu:hover {
     transform: scale(1.2); 
-    color: #109eb8; 
+    color: #1e1e1e; 
 }
 
 .social-links img {
@@ -108,4 +114,95 @@ header {
 
 .fade-in {
     animation: fadeIn 2s ease-out;
+}
+/* Разделённый экран */
+.split-section {
+    display: flex;
+    height: 100vh; /* Высота на весь экран */
+    width: 100%;
+    overflow: hidden; /* Чтобы не выходило за границы */
+    position: relative;
+}
+
+/* Базовые стили для половинок */
+.split {
+    flex: 1; /* Одинаковая ширина */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    transition: flex 0.5s ease-in-out; /* Плавное изменение размера */
+    position: relative; /* Для корректного наложения волны */
+}
+
+/* Левая часть - Designer */
+.split.left {
+    background: linear-gradient(to right, #1e1e1e 50%, rgba(30, 30, 30, 0.5) 80%, rgba(30, 30, 30, 0.2) 100%);
+}
+
+/* Правая часть - Coder */
+.split.right {
+    background: linear-gradient(to left, #109eb8 50%, rgba(16, 158, 184, 0.5) 80%, rgba(30, 30, 30, 0.2) 100%);
+}
+
+
+/* Эффект при наведении - левая часть увеличивается, правая сжимается */
+.split.left:hover {
+    flex: 1; /* Увеличивается */
+}
+
+.split.left:hover + .split.right {
+    flex: 0.5; /* Правая сжимается */
+}
+
+/* Эффект при наведении - правая часть увеличивается, левая сжимается */
+.split.right:hover {
+    flex: 2.5;
+}
+
+.split.right:hover ~ .split.left {
+    flex: 1.5;
+}
+
+/* Контейнер для текста */
+.content {
+    text-align: center; /* Центрируем текст */
+}
+
+/* Заголовки */
+.content h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Описание под заголовками */
+.content p {
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 80%;
+    line-height: 1.4;
+    opacity: 0.8; /* Чуть приглушённый текст */
+}
+
+/* Эффект увеличения и смены цвета при наведении */
+.content h2,
+.content p {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Для секции "Designer" (голубой текст) */
+.split.left:hover .content h2,
+.split.left:hover .content p {
+    transform: scale(1.05);
+    color: #109eb8;
+}
+
+/* Для секции "Coder" (чёрный текст) */
+.split.right:hover .content h2,
+.split.right:hover .content p {
+    transform: scale(1.05);
+    color: #1e1e1e;
 }
