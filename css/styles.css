@@ -206,3 +206,78 @@ header {
     transform: scale(1.05);
     color: #1e1e1e;
 }
+
+
+/* Новый раздел Tooling */
+
+.tooling-section {
+    padding: 40px;
+    background-color: #fff;  /* Белый фон */
+    margin-top: 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+/* Заголовок нового раздела */
+.tooling-title h2 {
+    font-size: 48px; /* Увеличиваем размер шрифта */
+    font-weight: 999;
+    color: #109eb8;  /* Однотонный цвет для текста */
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;  /* Немного увеличиваем межбуквенный интервал */
+}
+
+/* Контейнер для блоков с технологиями */
+.tooling-box {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Контейнер для блоков с технологиями */
+.tooling-box {
+    display: flex;
+    justify-content: center;  /* Центрируем иконки */
+    gap: 90px;  /* Уменьшаем расстояние между элементами */
+    flex-wrap: nowrap;  /* Убираем перенос строк */
+    max-width: 100%;  /* Обеспечиваем полный доступный размер */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Иконка */
+.box-icon {
+    width: 200px;  /* Размер иконки */
+    height: 200px; /* Размер иконки */
+    background-color: #109eb8;
+    border-radius: 50%;
+    margin-bottom: 50px; /* Отступ между иконками и текстом */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-icon img {
+    width: 140px;  /* Размер иконки внутри */
+    height: 140px;
+}
+
+/* Текст */
+.box-text p {
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+
+
+
