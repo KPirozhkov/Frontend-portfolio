@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background: linear-gradient(to bottom, #1e1e1e, #109eb8); 
+    background: linear-gradient(to bottom, #1e1e1e, #16ccc3); 
     color: white;
     margin: 0;
     font-family: "Comfortaa", sans-serif;
@@ -28,16 +28,17 @@ header {
 .logo h1,
 .logo h2 {
     transition: transform 0.3s ease, color 0.3s ease;
+    color: #ffffff;
 }
 
 .logo h1:hover {
     transform: scale(1.05);
-    color: #109eb8;
+    color: #16ccc3;
 }
 
 .logo h2:hover {
     transform: scale(1.05);
-    color: #109eb8;
+    color: #16ccc3;
 }
 .social-links a {
     font-weight: 400;
@@ -55,10 +56,11 @@ header {
     font-weight: 700;
     font-size: 14px;
     transition: transform 0.3s ease, color 0.3s ease;
+    color: #ffffff;
 }
 .contacts p:hover {
     transform: scale(1.1); 
-    color: #1e1e1e; 
+    color: #16ccc3; 
 }
 .burger-menu {
     font-size: 24px;
@@ -72,7 +74,7 @@ header {
 
 .burger-menu:hover {
     transform: scale(1.2); 
-    color: #1e1e1e; 
+    color: #16ccc3; 
 }
 
 .social-links img {
@@ -139,12 +141,12 @@ header {
 
 /* Левая часть - Designer */
 .split.left {
-    background: linear-gradient(to right, #1e1e1e 50%, rgba(30, 30, 30, 0.5) 80%, rgba(30, 30, 30, 0.2) 100%);
+    background: linear-gradient(to bottom, #110505 10%, #16ccc3 100%);
 }
 
 /* Правая часть - Coder */
 .split.right {
-    background: linear-gradient(to left, #109eb8 50%, rgba(16, 158, 184, 0.5) 80%, rgba(30, 30, 30, 0.2) 100%);
+    background: linear-gradient(to bottom, #110505 10%, #16ccc3 100%);
 }
 
 
@@ -197,7 +199,7 @@ header {
 .split.left:hover .content h2,
 .split.left:hover .content p {
     transform: scale(1.05);
-    color: #109eb8;
+    color: #1e1e1e;
 }
 
 /* Для секции "Coder" (чёрный текст) */
@@ -211,73 +213,277 @@ header {
 /* Новый раздел Tooling */
 
 .tooling-section {
-    padding: 40px;
-    background-color: #fff;  /* Белый фон */
-    margin-top: 0;
-    text-align: center;
-    width: 100%;
     position: relative;
+    padding: 60px 40px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(to bottom, #16ccc3 10%, #ffffff 80%);
 }
 
 /* Заголовок нового раздела */
 .tooling-title h2 {
-    font-size: 48px; /* Увеличиваем размер шрифта */
-    font-weight: 999;
-    color: #109eb8;  /* Однотонный цвет для текста */
-    margin-bottom: 20px;
-    text-align: center;
-    letter-spacing: 1px;  /* Немного увеличиваем межбуквенный интервал */
+    font-size: 65px;
+    font-weight: 900;
+    color: transparent;
+    margin-bottom: 40px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+    background: linear-gradient(150deg, #093133c9 40%, #093133c9 65%, #093133c9 40%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* Делаем элемент строчным, чтобы наведение работало только на текст */
+}
+
+/* При наведении на заголовок TOOLING */
+.tooling-title h2:hover {
+    text-shadow: 0 0 25px #00000067, 0 0 40px rgba(85, 195, 214, 0.8);
+    transform: translateY(-5px);
 }
 
 /* Контейнер для блоков с технологиями */
 .tooling-box {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 60px;
     flex-wrap: wrap;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative; /* Для обводки контейнера */
 }
 
-/* Контейнер для блоков с технологиями */
-.tooling-box {
+/* Каждый блок технологии */
+.box-content {
     display: flex;
-    justify-content: center;  /* Центрируем иконки */
-    gap: 90px;  /* Уменьшаем расстояние между элементами */
-    flex-wrap: nowrap;  /* Убираем перенос строк */
-    max-width: 100%;  /* Обеспечиваем полный доступный размер */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Иконка */
-.box-icon {
-    width: 200px;  /* Размер иконки */
-    height: 200px; /* Размер иконки */
-    background-color: #109eb8;
-    border-radius: 50%;
-    margin-bottom: 50px; /* Отступ между иконками и текстом */
-    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    width: 200px; /* Увеличиваем размер карточки */
+}
+
+/* Эффект при наведении на карточку */
+.box-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Иконка – круглый контейнер с текстурированным фоном */
+.box-icon {
+    width: 120px; /* Увеличиваем размер иконки */
+    height: 120px;
+    background: url('assets/icons/grid-texture.png');
+    background-size: cover;
+    border-radius: 50%;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+/* Убираем синий фон при наведении и только увеличиваем иконку */
+.box-icon:hover {
+    transform: scale(1.2); /* Увеличиваем иконку */
+    filter: brightness(1.2); /* Увеличиваем яркость */
+}
+
+/* Иконка внутри */
 .box-icon img {
-    width: 140px;  /* Размер иконки внутри */
-    height: 140px;
+    width: 80px; /* Увеличиваем размер изображения */
+    height: 80px;
 }
 
-/* Текст */
+/* Текст – название технологии */
 .box-text p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0.9;
+}
+
+/* При наведении на карточку – текст меняется по цвету */
+.box-content:hover .box-text p {
+    color: #1e1e1e;
+}
+
+/* Новый раздел - ЭКСПЕРТИЗА */
+
+* {
     margin: 0;
-    font-size: 25px;
-    font-weight: bold;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Comfortaa", sans-serif;
+    background-color: #f8f9fa;
     color: #333;
 }
 
+/* Секция Expertise */
 
+#experties {
+    background-color: white;
+    padding: 10px 0; /* Было 50px, уменьшил */
+    display: grid;
+    place-items: center;
+    height: 50vh; /* Было 100vh, уменьшил */
+}
 
+/* Контейнер */
+.container {
+    text-align: center; /* Центровка содержимого контейнера */
+    width: 80%; /* Ограничиваем ширину контейнера */
+    max-width: 1200px; /* Ограничиваем максимальную ширину */
+}
+
+/* Заголовок Expertise */
+h3.text-center {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 100px;
+}
+
+/* Стили для строк и колонок */
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Позиционирование текста внутри каждой колонки */
+.position-relative {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px; /* Высота блока для центровки */
+}
+
+/* Фон для текста */
+.bg-white {
+    background-color: white;
+    padding: 10px 1px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-140px); /* Сдвигаем текст влево */
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    z-index: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для текста */
+}
+
+/* Размер и стиль номера (Цифры) */
+.experties-number-size {
+    font-size: 13rem; /* Увеличиваем цифры еще в 2 раза */
+    font-weight: bold;
+    color: #333;
+    z-index: 0; /* Цифры будут позади текста */
+}
+
+/* Основной текст в секции Expertise */
+.bg-white {
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%; /* Центруем по вертикали */
+    left: 40%; /* Центруем по горизонтали */
+    transform: translate(-120%, -70%); /* Сдвигаем влево от центра */
+    white-space: nowrap; /* Запрещаем перенос текста */
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    z-index: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Цифры (01, 02, 03) */
+.experties-number-size {
+    font-size: 13rem;
+    font-weight: bold;
+    color: #333;
+    z-index: 0;
+}
+
+/* Позиционирование с точной настройкой */
+
+/* Для Web Design */
+.position-relative .shift-left {
+    position: absolute;
+    top: 34%; /* Сдвигаем чуть выше */
+    left: -21%; /* Сдвигаем чуть правее */
+    transform: translate(-50%, -50%);
+}
+
+/* Для Web Programming */
+.position-relative .shift-right {
+    position: absolute;
+    top: 34%; /* Сдвигаем чуть выше */
+    left: -35%; /* Сдвигаем немного левее */
+    transform: translate(-50%, -50%);
+}
+
+/* Для Illustration */
+.position-relative .shift-up {
+    position: absolute;
+    top: 34%; /* Поднимаем чуть выше */
+    left: -17%; /* Центрируем */
+    transform: translate(-50%, -50%);
+}
+
+/* Пульсация для текста */
+.bg-white {
+    position: absolute;
+    top: 50%; /* Центрируем по вертикали */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    z-index: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    animation: pulse 5s infinite ease-in-out;
+}
+
+/* Пульсация для цифр */
+.experties-number-size {
+    font-size: 13rem; /* Увеличиваем цифры */
+    font-weight: bold;
+    color: #333;
+    z-index: 0; /* Номера остаются позади текста */
+    display: inline-block; /* Для анимации */
+    animation: pulse 5s infinite ease-in-out;
+}
+
+/* Анимация пульсации */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Увеличение размера */
+    }
+}
 
 
 
