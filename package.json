@@ -1,0 +1,26 @@
+{
+  "name": "frontend-portfolio",
+  "version": "1.0.0",
+  "description": "Это мой личный сайт-портфолио, созданный с использованием HTML и CSS.",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KPirozhkov/Frontend-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KPirozhkov/Frontend-portfolio/issues"
+  },
+  "homepage": "https://github.com/KPirozhkov/Frontend-portfolio#readme",
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "gulp": "^5.0.0",
+    "gulp-cli": "^3.0.0"
+  }
+}
